@@ -1,5 +1,5 @@
-import { create } from "zustand";
-import { persist } from "zustand/middleware";
+import { create } from 'zustand';
+import { persist } from 'zustand/middleware';
 
 export type TTx = { chain_id: number; hash: string; created_at: string };
 
@@ -13,7 +13,7 @@ const useTxStore = create<{
       add: (tx) => set((state) => ({ txs: [tx, ...state.txs] })),
     }),
     {
-      name: "tx-storage",
+      name: 'tx-storage',
     }
   )
 );
